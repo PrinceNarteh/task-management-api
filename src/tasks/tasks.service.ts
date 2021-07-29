@@ -32,7 +32,7 @@ export class TasksService {
     return 'Update.Task';
   }
 
-  deleteTask(): string {
-    return 'Delete.A.Task';
+  deleteTask(id: string): void {
+    this.tasks = this.tasks.filter((task) => task.id !== id);
   }
 }
