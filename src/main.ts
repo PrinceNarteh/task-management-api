@@ -10,6 +10,9 @@ async function bootstrap() {
   // instantiating the NestJs app
   const app = await NestFactory.create(AppModule);
 
+  // enabling CORS
+  app.enableCors();
+
   // adding middleware
   app.useGlobalPipes(new ValidationPipe());
   app.useGlobalInterceptors(new TransformInterceptor());
