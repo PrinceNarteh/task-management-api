@@ -4,7 +4,7 @@ import { AppModule } from './app.module';
 import { TransformInterceptor } from './transform.intercepter';
 
 async function bootstrap() {
-  const port = 3000;
+  const port = process.env.PORT;
   const logger = new Logger();
 
   // instantiating the NestJs app
